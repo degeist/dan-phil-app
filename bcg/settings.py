@@ -9,7 +9,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = 'z$ik-)(jw3+u7j18^8wt=pje46-v$x*w(giki2vv9wqw$2*%g#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # Application definition
 
@@ -127,7 +127,7 @@ STATICFILES_DIRS = (
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CLOUDINARY = {
-  'cloud_name': 'geist',  
-  'api_key': '778995795312484',  
-  'api_secret': 'rwBjie-PuhVHNtwXgUmXCe5IO5o',  
+  'cloud_name': 'geist',
+  'api_key': '778995795312484',
+  'api_secret': 'rwBjie-PuhVHNtwXgUmXCe5IO5o',
 }

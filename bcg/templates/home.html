@@ -60,27 +60,35 @@
     </div>
   </header>
   <section id="artboard" class="artboard">
-    <div class="artboard__title">
-      <img src="{% static 'img/artboard/danphil-headline.png' %}" class="artboard__title__static" alt="Dan and Phil"/>
+    <div class="artboard__wrapper artboard__wrapper--title">
+      <img src="{% static 'img/artboard/danphil-headline.png' %}" class="artboard__title" alt="Dan and Phil"/>
     </div>
-    <div class="artboard__actionable-item artboard__actionable-item--background-upload">
-      <a href="#" class="artboard__icon" data-toggle="modal" data-target="#backgroundUploadModal">
-        <svg class="icon-camera"><use xlink:href="{% static 'img/icons/icons.svg#icon-camera' %}"></use></svg>
+
+    <div class="artboard__wrapper artboard__wrapper--background-upload">
+      <div class="artboard__actionable-item artboard__actionable-item--background-upload">
+        <a href="#" class="artboard__icon" data-toggle="modal" data-target="#backgroundUploadModal">
+          <svg class="icon-camera"><use xlink:href="{% static 'img/icons/icons.svg#icon-camera' %}"></use></svg>
+        </a>
         <span class="artboard__helper-text artboard__helper-text--br">
           Upload a background!
           <svg class="icon-arrow"><use xlink:href="{% static 'img/icons/icons.svg#icon-arrow' %}"></use></svg>
         </span>
-      </a>
+      </div>
     </div>
-    <div class="artboard__actionable-item artboard__actionable-item--cutouts-selector">
-      <img src="{% static 'img/artboard/dummy-cutout.png' %}" class="artboard__cutouts" alt="Cutout"/>
-      <span class="artboard__helper-text artboard__helper-text--tl">
-        Select your DP
-        <svg class="icon-arrow"><use xlink:href="{% static 'img/icons/icons.svg#icon-arrow' %}"></use></svg>
-      </span>
+
+    <div class="artboard__wrapper artboard__wrapper--cutouts-selector">
+      <div class="artboard__actionable-item artboard__actionable-item--cutouts-selector">
+        <img src="{% static 'img/artboard/dummy-cutout.png' %}" class="artboard__cutouts" alt="Cutout"/>
+        <span class="artboard__helper-text artboard__helper-text--tl">
+          Select your DP
+          <svg class="icon-arrow"><use xlink:href="{% static 'img/icons/icons.svg#icon-arrow' %}"></use></svg>
+        </span>
+      </div>
     </div>
-    <div class="artboard__subtitle">
-      <div class="artboard__actionable-item--title text-xs-center">
+
+
+    <div class="artboard__wrapper artboard__wrapper--subtitle">
+      <div class="artboard__actionable-item artboard__actionable-item--subtitle">
         <p id="userCoverTextEditable" class="inline-text-edit">go outside</p>
           <span class="artboard__helper-text artboard__helper-text--bl">
             Write some text
