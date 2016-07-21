@@ -66,9 +66,9 @@
 
     <div class="artboard__wrapper artboard__wrapper--background-upload">
       <div class="artboard__actionable-item artboard__actionable-item--background-upload">
-        <a href="#" class="artboard__icon" data-toggle="modal" data-target="#backgroundUploadModal">
+        <span id="backgroundUpload" class="artboard__icon">
           <svg class="icon-camera"><use xlink:href="{% static 'img/icons/icons.svg#icon-camera' %}"></use></svg>
-        </a>
+        </span>
         <span class="artboard__helper-text artboard__helper-text--br">
           Upload a background!
           <svg class="icon-arrow"><use xlink:href="{% static 'img/icons/icons.svg#icon-arrow' %}"></use></svg>
@@ -78,7 +78,7 @@
 
     <div class="artboard__wrapper artboard__wrapper--cutouts">
       <div class="artboard__actionable-item artboard__actionable-item--cutouts">
-        <img src="{% static 'img/artboard/dummy-cutout.png' %}" id="artboardCutout" class="artboard__cutouts" alt="Cutout" data-toggle="modal" data-target="#cutoutsSelectorModal" />
+        <img src="{% static 'img/artboard/dummy-cutout.png' %}" id="artboardCutout" class="artboard__cutouts" alt="Cutout" />
         <span class="artboard__helper-text artboard__helper-text--tl">
           Select your DP
           <svg class="icon-arrow"><use xlink:href="{% static 'img/icons/icons.svg#icon-arrow' %}"></use></svg>
@@ -158,7 +158,6 @@
           <div class="modal-body p-a-1">
             <div class="container-fluid">
               <div class="row">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <ul class="inline-list p-a-1">
                     <li>
                         <img src="{% static 'img/artboard/dummy-cutout-shadow.png' %}" class="modal--cutouts-selector__option" alt="Cutout" data-large-img="{% static 'img/artboard/dummy-cutout.png' %}"/>
