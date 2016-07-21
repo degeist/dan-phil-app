@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load cloudinary %}
+{% load staticfiles %}
+
+{% block body %}
+<h1>Here's your artboard:</h1>
+{% cloudinary artboard.image width=400 height=400 %}
+<p>This artboard was created on {{ artboard.date_added }}</p>
+{% endblock %}
