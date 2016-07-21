@@ -499,7 +499,7 @@ output {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  font-family: "Open Sans", -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -6426,6 +6426,7 @@ h1, h2, h3, h4 {
   position: fixed;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   z-index: 2000;
+  display: none;
 }
 
 .inline-list {
