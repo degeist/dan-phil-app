@@ -47,13 +47,10 @@
   <script src="{% static 'js/vendor/jquery.inline-edit.js' %}"></script>
   {% cloudinary_includes %}
   {% cloudinary_js_config %}
-
-
   <script src="{% static 'js/ui.js' %}"></script>
 </head>
 <body>
   <div class="corner-ribbon">Continue to website &rarr;</div>
-
   <header class="masthead">
     <div class="container">
       <div class="row p-y-1">
@@ -100,7 +97,7 @@
 
     </section>
     <section class="social container m-y-3 text-xs-center">
-      <a href="#" class="btn btn-primary btn-lg">I'm done. Share this image</a>
+      <a href="#" class="btn btn-primary btn-lg finish">I'm done. Share this image</a>
     </section>
     <footer class="m-t-3">
       <div class="container">
@@ -130,18 +127,19 @@
                   </form>
                 </div>
 
-                <span class="dropzone">
+                <!-- <span class="dropzone"> -->
 
-                  <span>Drag image here or click to upload</span>
+                  <!-- <span>Drag image here or click to upload</span> -->
                   <!-- The file input field used as target for the file upload widget -->
-                  <input id="fileupload" type="file" name="files[]" multiple>
-                </span>
-                <!-- The global progress bar -->
-                <div id="progress" class="progress">
-                  <div class="progress-bar progress-bar-success"></div>
-                </div>
-
+                  <!-- <input id="fileupload" type="file" name="files[]" multiple> -->
+                <!-- </span> -->
               </div>
+
+              <progress class="progress">
+                <div class="progress">
+                  <span class="progress-bar progress-bar-success"></span>
+                </div>
+              </progress>
 
               <p class="lead text-xs-center">
                 ... or select one of ours

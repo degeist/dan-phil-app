@@ -35,9 +35,8 @@ $(function () {
     },
   })
   .on('cloudinaryprogress', function (e, data) {
-    console.log(data.loaded);
-    console.log(data.total);
-    $('.progress_bar').css('width',
+    $('.progress').show();
+    $('.progress').css('width',
       Math.round((data.loaded * 100.0) / data.total) + '%');
   })
   .on('cloudinarydone', function (e, data) {

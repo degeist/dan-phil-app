@@ -48,4 +48,16 @@ $(document).ready(function() {
     $(this).children('.artboard__helper-text').hide('fast');
   });
 
+  // Output variables
+
+  $('.finish').click(function() {
+    var bg = $('#artboard').css("background-image").replace('url(','').replace(')','');
+    var cutout = $('img#artboardCutout').attr('src');
+    var text = $('p#userCoverTextEditable').text();
+
+    alert("BackgroundURL: " + bg + "\nCutout img: " + cutout + "\nEdited text: " + text);
+
+  });
+
+
 });
