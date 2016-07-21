@@ -76,16 +76,15 @@
       </div>
     </div>
 
-    <div class="artboard__wrapper artboard__wrapper--cutouts-selector">
-      <div class="artboard__actionable-item artboard__actionable-item--cutouts-selector">
-        <img src="{% static 'img/artboard/dummy-cutout.png' %}" class="artboard__cutouts" alt="Cutout"/>
+    <div class="artboard__wrapper artboard__wrapper--cutouts">
+      <div class="artboard__actionable-item artboard__actionable-item--cutouts">
+        <img src="{% static 'img/artboard/dummy-cutout.png' %}" id="artboardCutout" class="artboard__cutouts" alt="Cutout" data-toggle="modal" data-target="#cutoutsSelectorModal" />
         <span class="artboard__helper-text artboard__helper-text--tl">
           Select your DP
           <svg class="icon-arrow"><use xlink:href="{% static 'img/icons/icons.svg#icon-arrow' %}"></use></svg>
         </span>
       </div>
     </div>
-
 
     <div class="artboard__wrapper artboard__wrapper--subtitle">
       <div class="artboard__actionable-item artboard__actionable-item--subtitle">
@@ -96,7 +95,6 @@
           </span>
       </div>
     </div>
-
 
     </section>
     <section class="social container m-y-3 text-xs-center">
@@ -111,7 +109,7 @@
       </div>
     </footer>
 
-    <div id="backgroundUploadModal" class="modal fade">
+    <div id="backgroundUploadModal" class="modal fade modal--background-upload">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -120,7 +118,7 @@
             </button>
             <h4 class="modal-title">Upload your image</h4>
           </div>
-          <div class="modal-body p-a-3">
+          <div class="modal-body p-a-1">
             <div class="container-fluid">
               <div class="row">
                 <span class="dropzone">
@@ -151,5 +149,30 @@
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+
+
+    <!-- Cutout selctor modal -->
+    <div id="cutoutsSelectorModal" class="modal fade modal--cutouts-selector">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-body p-a-1">
+            <div class="container-fluid">
+              <div class="row">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <ul class="inline-list p-a-1">
+                    <li>
+                        <img src="{% static 'img/artboard/dummy-cutout-shadow.png' %}" class="modal--cutouts-selector__option" alt="Cutout" data-large-img="{% static 'img/artboard/dummy-cutout.png' %}"/>
+                    </li>
+                    <li>
+                      <img src="{% static 'img/artboard/dummy-cutout1-shadow.png' %}" class="modal--cutouts-selector__option" alt="Cutout" data-large-img="{% static 'img/artboard/dummy-cutout1.png' %}"/>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
   </body>
 </html>

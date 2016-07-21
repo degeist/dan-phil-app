@@ -6440,6 +6440,10 @@ h1, h2, h3, h4 {
   margin: 0 0.125rem;
 }
 
+.modal-header {
+  border-bottom: none;
+}
+
 [class^="icon-"], [class*=" icon-"] {
   height: 32px;
   width: 32px;
@@ -6528,7 +6532,7 @@ a.logo svg:hover {
   z-index: 400;
 }
 
-.artboard__wrapper--cutouts-selector {
+.artboard__wrapper--cutouts {
   height: 396px;
   top: calc(66px + 4 * 1rem + 32px);
 }
@@ -6644,18 +6648,24 @@ a.logo svg:hover {
   transform: scaleX(-1);
 }
 
-.modal-header {
-  border-bottom: none;
+.modal--cutouts-selector__option {
+  max-width: 50px;
+  opacity: 0.7;
 }
 
-.modal img {
+.modal--cutouts-selector__option:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.modal--background-upload img {
   max-width: 100%;
   height: auto;
   border: 2px solid white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.modal img:hover {
+.modal--background-upload img:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 

@@ -39,7 +39,7 @@ $z-index-bg-upload:     400;
       z-index: $z-index-bg-upload;
     }
 
-    &--cutouts-selector {
+    &--cutouts {
       height: $artboard-height * .60;
       top: calc(#{$artboard-title-height} + 4 * #{$spacer-y} + #{$icon-size});
     }
@@ -48,22 +48,14 @@ $z-index-bg-upload:     400;
         top: calc(#{$artboard-title-height} + 4 * #{$spacer-y} + #{$icon-size} + #{$artboard-height} * .60);
         height: $artboard-height * .12;
     }
-
-
   }
-
 
   .artboard__subtitle {
     position: absolute;
     display: block;
     width: 100%;
     top: $artboard-height * .85;
-
-
     }
-
-
-
 
   // Actionable item is wrapper for the item upon which action can be taken.
   // Also used for positioning the helper text
