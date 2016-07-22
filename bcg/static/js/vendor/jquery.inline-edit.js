@@ -6,6 +6,9 @@
 
     $.fn.inlineEdit = function(event, options, callback) {
 
+      var wordCounter     = $('.artboard__subtitle__word-counter');
+      var paragraphClass  = $('.inline-text-edit');
+
         if(typeof(options) == 'function') {
 
             callback = options;
@@ -30,32 +33,32 @@
                     var text = $(target).text();
                     $(target).data('original-text', text)
                         .html(IE.inputTag(text, options));
-                    $('.artboard__subtitle__word-counter').show();
                     // Remove padding, so box does not "pop"
-                    $('.inline-text-edit').css('padding', '0');
+                    paragraphClass
+                      .css('padding', '0');
 
-                     // Word counter
+                     // Reveal word counter and set maxLength
+                    wordCounter.show();
                     var maxLength = $('.inline-edit-input').attr('maxlength');
-                    console.log(maxLength);
-
-                    //$('.inline-edit-input').attr('maxength');
-                    $('.inline-edit-input').keyup(function() {
-                      var length = $(this).val().length;
-                      var length = maxLength-length;
-                      console.log(length);
-                      $('#chars').text(length);
-                    });
-
+                    var length = maxLength;
 
                     IE.inputChild(target)
                         .focus()
                         .val("") // Clear the text field
+                        .keyup(function() {
+                          var length = $(this).val().length;
+                          var length = maxLength-length;
+                          $('#chars').text(length);
+                        })
                         .on('blur keypress', function(e){
 
                             if(e.type == 'blur' || (e.type == 'keypress' && e.keyCode == 13)) {
 
                                 IE.hide(e, target);
-                                $('.artboard__subtitle__word-counter').hide();
+
+                                // Hide and reset counter
+                                wordCounter.hide();
+                                $('#chars').text(length);
                             }
 
                         });
@@ -84,8 +87,8 @@
                         callback(text, originalText, $(target));
 
                     }
-                    // Add shadow padding to text field on hide
-                    $('.inline-text-edit').css('padding', '1px');
+                    // Re-add shadow padding to text field on hide
+                    paragraphClass.css('padding', '1px');
 
 
                 }
