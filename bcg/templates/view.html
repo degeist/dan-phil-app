@@ -3,7 +3,5 @@
 {% load staticfiles %}
 
 {% block body %}
-<h1>Here's your artboard:</h1>
-{% cloudinary artboard.image width=400 height=400 %}
-<p>This artboard was created on {{ artboard.date_added }}</p>
+	<img src="http://res.cloudinary.com/geist/image/upload/l_{{ cutout }}/l_text:helvetica_20_bold:{{ text|urlencode:"" }},g_south,co_rgb:ffcc00/w_500,h_500,c_scale/{{ version_id }}/{{ image_id }}.{{ image_extension }}" />
 {% endblock %}

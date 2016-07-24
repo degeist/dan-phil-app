@@ -15,6 +15,11 @@ def view(request, version_id, image_id, image_extension):
 
     context = {
         'artboard': artboard,
+        'version_id': version_id,
+        'image_id': image_id,
+        'image_extension': image_extension,
+        'cutout': request.GET.get('cutout'),
+        'text': request.GET.get('text'),
     }
     return render(request, 'view.html', context)
 
