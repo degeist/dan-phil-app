@@ -24,13 +24,13 @@
   <meta content="" property="og:url">
   <meta content="" property="og:site_name">
   <meta content="" property="og:description">
-  <meta content="{% static 'img/artboard/dummy-cutout.png' %}" property="og:image">
+  <meta content="{% static  'img/artboard/dp-cutout4.png' %}" property="og:image">
   <!-- / Twitter cards -->
   <meta content="summary_large_image" name='twitter:card'>
   <meta content="@" name='twitter:site'>
   <meta content="" name='twitter:title'>
   <meta content="" name='twitter:description'>
-  <meta content="{% static 'img/artboard/dummy-cutout.png' %}" name='twitter:image'>
+  <meta content="{% static  'img/artboard/dp-cutout4.png' %}" name='twitter:image'>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,7 +47,6 @@
   <script src="{% static 'js/vendor/jquery.inline-edit.js' %}"></script>
   {% cloudinary_includes %}
   {% cloudinary_js_config %}
-  <script src="{% static 'js/ui.js' %}"></script>
 </head>
 <body>
   <div class="corner-ribbon">Continue to website &rarr;</div>
@@ -77,7 +76,7 @@
 
     <div class="artboard__wrapper artboard__wrapper--cutouts">
       <div class="artboard__actionable-item artboard__actionable-item--cutouts">
-        <img src="{% static 'img/artboard/dummy-cutout.png' %}" id="artboardCutout" class="artboard__cutouts" alt="Cutout" />
+        <img src="{% static 'img/artboard/dp-cutout4.png' %}" id="artboardCutout" class="artboard__cutouts" alt="Cutout" />
         <span class="artboard__helper-text artboard__helper-text--tl">
           Select your DP
           <svg class="icon-arrow"><use xlink:href="{% static 'img/icons/icons.svg#icon-arrow' %}"></use></svg>
@@ -92,6 +91,9 @@
             Write some text
             <svg class="icon-arrow"><use xlink:href="{% static 'img/icons/icons.svg#icon-arrow' %}"></use></svg>
           </span>
+      </div>
+      <div class="artboard__subtitle__word-counter">
+          <span id="chars">50</span> characters remaining
       </div>
     </div>
 
@@ -115,33 +117,27 @@
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
-            <h4 class="modal-title">Upload your image</h4>
           </div>
           <div class="modal-body p-a-1">
             <div class="container-fluid">
-              <div class="row">
-                <div id='direct_upload'>
-                  <form action="{% url 'direct_upload_complete' %}" method="post" enctype="multipart/form-data">
+              <p class="lead text-xs-center">
+                Upload your image...
+              </p>
+
+                <div id="direct_upload" class="row">
+                  <form action="{% url 'direct_upload_complete' %}" method="post" enctype="multipart/form-data" class="dropzone">
+                    <span>Drag image here or click to upload</span>
                     {% csrf_token %}
                     {% cloudinary_direct_upload_field request=request %}
                   </form>
                 </div>
-
-                <!-- <span class="dropzone"> -->
-
-                  <!-- <span>Drag image here or click to upload</span> -->
-                  <!-- The file input field used as target for the file upload widget -->
-                  <!-- <input id="fileupload" type="file" name="files[]" multiple> -->
-                <!-- </span> -->
-              </div>
-
               <progress class="progress">
                 <div class="progress">
                   <span class="progress-bar progress-bar-success"></span>
                 </div>
               </progress>
 
-              <p class="lead text-xs-center">
+              <p class="lead text-xs-center m-y-2">
                 ... or select one of ours
               </p>
               <div class="row">
@@ -151,6 +147,7 @@
                 <div class="col-xs-6 col-md-4">
                   <a href="#" class="select-background"><img src="{% static 'img/artboard/backgrounds/thumbnails/dummy-bg1.jpg' %}" alt="image" data-large-img="{% static 'img/artboard/backgrounds/dummy-bg1.jpg' %}" /></a>
                 </div>
+
               </div>
             </div>
           </div>
@@ -168,10 +165,16 @@
               <div class="row">
                 <ul class="inline-list p-a-1">
                     <li>
-                        <img src="{% static 'img/artboard/dummy-cutout-shadow.png' %}" class="modal--cutouts-selector__option" alt="Cutout" data-large-img="{% static 'img/artboard/dummy-cutout.png' %}"/>
+                        <img src="{% static 'img/artboard/dp-cutout1-shadow.png' %}" class="modal--cutouts-selector__option" alt="Cutout" data-large-img="{% static 'img/artboard/dp-cutout1.png' %}"/>
                     </li>
                     <li>
-                      <img src="{% static 'img/artboard/dummy-cutout1-shadow.png' %}" class="modal--cutouts-selector__option" alt="Cutout" data-large-img="{% static 'img/artboard/dummy-cutout1.png' %}"/>
+                      <img src="{% static 'img/artboard/dp-cutout2-shadow.png' %}" class="modal--cutouts-selector__option" alt="Cutout" data-large-img="{% static 'img/artboard/dp-cutout2.png' %}"/>
+                    </li>
+                    <li>
+                        <img src="{% static 'img/artboard/dp-cutout3-shadow.png' %}" class="modal--cutouts-selector__option" alt="Cutout" data-large-img="{% static 'img/artboard/dp-cutout3.png' %}"/>
+                    </li>
+                    <li>
+                      <img src="{% static 'img/artboard/dp-cutout4-shadow.png' %}" class="modal--cutouts-selector__option" alt="Cutout" data-large-img="{% static 'img/artboard/dp-cutout4.png' %}"/>
                     </li>
                 </ul>
               </div>
@@ -182,6 +185,7 @@
     </div><!-- /.modal -->
 
   <script src="{% static 'js/dropzone.js' %}"></script>
+  <script src="{% static 'js/ui.js' %}"></script>
 
   </body>
 </html>
