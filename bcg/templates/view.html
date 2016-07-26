@@ -3,5 +3,33 @@
 {% load staticfiles %}
 
 {% block body %}
-	<img src="http://res.cloudinary.com/geist/image/upload/l_static:{{ cutout }}/l_static:danphil-headline.png,w_500,y_10,g_north/l_text:Open%20Sans_40_bold:{{ text|urlencode:"" }},g_south,y_50,w_500,c_fit,co_rgb:FFFFFF/w_500,h_660,c_fill/{{ version_id }}/{{ image_id }}.{{ image_extension }}" alt="Your finished cover" />
+
+	<header class="masthead">
+		<div class="container">
+			<div class="row p-y-1">
+				<h1 class="masthead__welcome text-xs-center">Share your artwork!</h1>
+			</div>
+		</div>
+	</header>
+	<section id="final-artboard" class="artboard">
+		<div class="container">
+			<div class="row p-y-1">
+				<div class="artboard__wrapper artboard__wrapper--title">
+						<img src="http://res.cloudinary.com/geist/image/upload/l_static:{{ cutout }}/l_static:danphil-headline.png,w_500,y_10,g_north/l_text:Open%20Sans_40_bold:{{ text|urlencode:"" }},g_south,y_50,w_500,c_fit,co_rgb:FFFFFF/w_500,h_660,c_fill/{{ version_id }}/{{ image_id }}.{{ image_extension }}" alt="Your finished cover" />
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="share-artboard">
+		<a class="twitter-share-button"
+		  href="https://twitter.com/intent/tweet?text=Hello%20world"
+		  data-size="large">
+		Tweet</a>
+	</section>
+
+
+	<a class="tumblr-share-button" href="https://www.tumblr.com/share"></a>
+	<script id="tumblr-js" async src="https://assets.tumblr.com/share-button.js"></script>
+
+
 {% endblock %}
