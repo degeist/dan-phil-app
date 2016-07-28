@@ -1,15 +1,13 @@
 $artboard-ratio:        1.32;
 $artboard-width:        500px;
 $artboard-height:       $artboard-width * $artboard-ratio;
-$artboard-title-height: $artboard-height * 0.1;
+$artboard-title-height: $artboard-height * 0.14;
 
 $artboard-subtitle-height: calc(#{$artboard-height} - (#{$artboard-title-height} + 4 * #{$spacer-y} + #{$icon-size} + #{$artboard-height} * .60 + 8px));
 
 
 // Z-index (Bootstrap starts at 1000)
 $z-index-bg-upload:     400;
-
-
 
 .artboard {
   // Optimise this for mobile
@@ -27,10 +25,7 @@ $z-index-bg-upload:     400;
   }
 
   &--final {
-    max-width: auto;
-    min-height: auto;
-    width:  $artboard-width/2;
-    height: $artboard-height/2;
+    border: 4px solid lighten($brand-primary,60%);
   }
 
   // Artboard wrappers take care of placement/sizing of the element on the artboard
@@ -76,9 +71,13 @@ $z-index-bg-upload:     400;
     }
 
     &--background-upload {
-      width: $icon-size;
+      width: $icon-size + 4px;
+
       svg.icon-camera {
-        fill: rgba(255,255,255, .7)
+        fill: rgba(255,255,255, .7);
+        padding: 2px;
+        border-radius: $border-radius;
+        background-color: $brand-primary;
       }
 
       &:hover {
@@ -113,5 +112,9 @@ $z-index-bg-upload:     400;
     height:  $artboard-height * .60;
     width: auto;
     display: block;
+  }
+
+  &__icon {
+    display: inline-block;
   }
 }
