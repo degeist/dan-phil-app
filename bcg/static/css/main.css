@@ -7095,12 +7095,25 @@ a.logo svg:hover {
   position: relative;
 }
 
+@media (min-width: 768px) {
+  .artboard {
+    max-width: none;
+    min-height: initial;
+    width: 500px;
+    height: 660px;
+  }
+}
+
 .artboard--work {
   background: url("http://res.cloudinary.com/geist/image/upload/v1468772151/bg-1.jpg") top center no-repeat #F5EFE9;
 }
 
 .artboard--final {
   border: 4px solid #d9ebf1;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  min-height: initial;
 }
 
 .artboard__wrapper {
@@ -7129,8 +7142,8 @@ a.logo svg:hover {
 }
 
 .artboard__wrapper--subtitle {
-  top: calc(92.4px + 4 * 1rem + 32px + 660px * .60);
-  height: calc(660px - (92.4px + 4 * 1rem + 32px + 660px * .60 + 8px));
+  top: calc(92.4px + 4 * 1rem + 32px + 660px * .56);
+  height: calc(660px - (92.4px + 4 * 1rem + 32px + 660px * .56 + 8px));
 }
 
 .artboard__actionable-item {
@@ -7181,15 +7194,29 @@ a.logo svg:hover {
   display: block;
 }
 
+@media (max-width: 991px) {
+  .artboard__cutouts {
+    height: 363px;
+  }
+}
+
 .artboard__icon {
   display: inline-block;
+}
+
+.toc {
+  display: block;
+  clear: both;
+  max-width: 300px;
+  margin: 1rem auto;
+  font-style: italic;
 }
 
 .inline-text-edit {
   font-family: "Open Sans", "Akzidenz", sans-serif;
   font-weight: 700;
   padding: 1px;
-  height: calc(660px - (92.4px + 4 * 1rem + 32px + 660px * .60 + 8px));
+  height: calc(660px - (92.4px + 4 * 1rem + 32px + 660px * .56 + 8px));
   font-size: 28px;
   color: white;
   display: block;
@@ -7197,6 +7224,12 @@ a.logo svg:hover {
   overflow: hidden;
   word-break: break-all;
   word-wrap: break-word;
+}
+
+@media (max-width: 991px) {
+  .inline-text-edit {
+    font-size: 20px;
+  }
 }
 
 .inline-edit-input {
@@ -7212,6 +7245,7 @@ a.logo svg:hover {
 
 .artboard__subtitle__word-counter {
   display: none;
+  text-align: center;
 }
 
 .artboard__helper-text {
@@ -7255,6 +7289,12 @@ a.logo svg:hover {
   transform: rotate(7deg);
   top: 150px;
   left: -80px;
+}
+
+@media (max-width: 991px) {
+  .artboard__helper-text--tl {
+    left: -20px;
+  }
 }
 
 .artboard__helper-text--tl svg {
