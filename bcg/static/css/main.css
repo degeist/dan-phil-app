@@ -2653,27 +2653,27 @@ fieldset[disabled] a.btn {
 
 .btn-secondary {
   color: #fff;
-  background-color: #F5EFE9;
-  border-color: #F5EFE9;
+  background-color: #F59C00;
+  border-color: #F59C00;
 }
 
 .btn-secondary:hover {
   color: #fff;
-  background-color: #e5d6c6;
-  border-color: #e2d0bf;
+  background-color: #c27c00;
+  border-color: #b87500;
 }
 
 .btn-secondary:focus, .btn-secondary.focus {
   color: #fff;
-  background-color: #e5d6c6;
-  border-color: #e2d0bf;
+  background-color: #c27c00;
+  border-color: #b87500;
 }
 
 .btn-secondary:active, .btn-secondary.active,
 .open > .btn-secondary.dropdown-toggle {
   color: #fff;
-  background-color: #e5d6c6;
-  border-color: #e2d0bf;
+  background-color: #c27c00;
+  border-color: #b87500;
   background-image: none;
 }
 
@@ -2682,18 +2682,18 @@ fieldset[disabled] a.btn {
 .open > .btn-secondary.dropdown-toggle:focus,
 .open > .btn-secondary.dropdown-toggle.focus {
   color: #fff;
-  background-color: #dac4ad;
-  border-color: #cdaf91;
+  background-color: #9e6500;
+  border-color: #764b00;
 }
 
 .btn-secondary.disabled:focus, .btn-secondary.disabled.focus, .btn-secondary:disabled:focus, .btn-secondary:disabled.focus {
-  background-color: #F5EFE9;
-  border-color: #F5EFE9;
+  background-color: #F59C00;
+  border-color: #F59C00;
 }
 
 .btn-secondary.disabled:hover, .btn-secondary:disabled:hover {
-  background-color: #F5EFE9;
-  border-color: #F5EFE9;
+  background-color: #F59C00;
+  border-color: #F59C00;
 }
 
 .btn-info {
@@ -2920,29 +2920,29 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-secondary {
-  color: #F5EFE9;
+  color: #F59C00;
   background-image: none;
   background-color: transparent;
-  border-color: #F5EFE9;
+  border-color: #F59C00;
 }
 
 .btn-outline-secondary:hover {
   color: #fff;
-  background-color: #F5EFE9;
-  border-color: #F5EFE9;
+  background-color: #F59C00;
+  border-color: #F59C00;
 }
 
 .btn-outline-secondary:focus, .btn-outline-secondary.focus {
   color: #fff;
-  background-color: #F5EFE9;
-  border-color: #F5EFE9;
+  background-color: #F59C00;
+  border-color: #F59C00;
 }
 
 .btn-outline-secondary:active, .btn-outline-secondary.active,
 .open > .btn-outline-secondary.dropdown-toggle {
   color: #fff;
-  background-color: #F5EFE9;
-  border-color: #F5EFE9;
+  background-color: #F59C00;
+  border-color: #F59C00;
 }
 
 .btn-outline-secondary:active:hover, .btn-outline-secondary:active:focus, .btn-outline-secondary:active.focus, .btn-outline-secondary.active:hover, .btn-outline-secondary.active:focus, .btn-outline-secondary.active.focus,
@@ -2950,16 +2950,16 @@ fieldset[disabled] a.btn {
 .open > .btn-outline-secondary.dropdown-toggle:focus,
 .open > .btn-outline-secondary.dropdown-toggle.focus {
   color: #fff;
-  background-color: #dac4ad;
-  border-color: #cdaf91;
+  background-color: #9e6500;
+  border-color: #764b00;
 }
 
 .btn-outline-secondary.disabled:focus, .btn-outline-secondary.disabled.focus, .btn-outline-secondary:disabled:focus, .btn-outline-secondary:disabled.focus {
-  border-color: white;
+  border-color: #ffc45c;
 }
 
 .btn-outline-secondary.disabled:hover, .btn-outline-secondary:disabled:hover {
-  border-color: white;
+  border-color: #ffc45c;
 }
 
 .btn-outline-info {
@@ -4367,7 +4367,7 @@ input[type="button"].btn-block {
 
 .card-outline-secondary {
   background-color: transparent;
-  border-color: #F5EFE9;
+  border-color: #F59C00;
 }
 
 .card-outline-info {
@@ -6997,19 +6997,25 @@ h1, h2, h3, h4 {
 
 /* The ribbons */
 .corner-ribbon {
-  width: 300px;
-  background: #295E6F;
-  top: 50px;
-  left: -75px;
-  text-align: center;
-  line-height: 50px;
-  color: #f0f0f0;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  position: fixed;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-  z-index: 2000;
   display: none;
+}
+
+@media (min-width: 768px) {
+  .corner-ribbon {
+    width: 300px;
+    background: #F59C00;
+    top: 50px;
+    left: -75px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 50px;
+    color: #f0f0f0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: fixed;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    z-index: 2000;
+  }
 }
 
 .inline-list {

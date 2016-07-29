@@ -22,13 +22,13 @@ $z-index-bg-upload:     400;
   // Optimise this for mobile
   margin: 0 auto;
   border: 4px solid white;
-  background-color: $brand-secondary;
+  background-color: $sand-color;
   @include box-shadow(4);
   background-size: cover;
   position: relative;
 
   &--work {
-    background: url('http://res.cloudinary.com/geist/image/upload/v1468772151/bg-1.jpg') top center no-repeat $brand-secondary;
+    background: url('http://res.cloudinary.com/geist/image/upload/v1468772151/bg-1.jpg') top center no-repeat $sand-color;
   }
 
   &--final {
