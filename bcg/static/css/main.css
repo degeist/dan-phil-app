@@ -7002,8 +7002,9 @@ h1, h2, h3, h4 {
 
 @media (min-width: 768px) {
   .corner-ribbon {
+    display: block;
     width: 300px;
-    background: #F59C00;
+    background: #5bc0de;
     top: 50px;
     left: -75px;
     text-align: center;
@@ -7097,11 +7098,11 @@ a.logo svg:hover {
   border: 4px solid white;
   background-color: #F5EFE9;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  background-size: cover;
+  background-size: 500px 660px;
   position: relative;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 544px) {
   .artboard {
     max-width: none;
     min-height: initial;
@@ -7111,7 +7112,9 @@ a.logo svg:hover {
 }
 
 .artboard--work {
-  background: url("http://res.cloudinary.com/geist/image/upload/v1468772151/bg-1.jpg") top center no-repeat #F5EFE9;
+  background-image: url("http://res.cloudinary.com/geist/image/upload/v1469996798/bg4.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
 }
 
 .artboard--final {
@@ -7131,25 +7134,28 @@ a.logo svg:hover {
 
 .artboard__wrapper--title {
   display: block;
-  margin: 1rem auto;
-  height: 92.4px;
+  margin: 4px auto;
+  height: 86px;
   top: 0;
+  z-index: 100;
 }
 
 .artboard__wrapper--background-upload {
   height: 32px;
-  top: calc(92.4px + 2* 1rem);
-  z-index: 400;
+  top: 94px;
+  z-index: 110;
 }
 
 .artboard__wrapper--cutouts {
-  height: 396px;
-  top: calc(92.4px + 4 * 1rem + 32px);
+  height: 460px;
+  top: 126px;
+  z-index: 104;
 }
 
 .artboard__wrapper--subtitle {
-  top: calc(92.4px + 4 * 1rem + 32px + 660px * .56);
-  height: calc(660px - (92.4px + 4 * 1rem + 32px + 660px * .56 + 8px));
+  bottom: 0;
+  min-height: 100px;
+  z-index: 106;
 }
 
 .artboard__actionable-item {
@@ -7187,6 +7193,7 @@ a.logo svg:hover {
 .artboard__actionable-item--subtitle {
   display: block;
   padding: 0 1rem;
+  line-height: 40px;
 }
 
 .artboard__title {
@@ -7195,14 +7202,14 @@ a.logo svg:hover {
 }
 
 .artboard__cutouts {
-  height: 396px;
+  height: 460px;
   width: auto;
   display: block;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .artboard__cutouts {
-    height: 363px;
+    height: 396px;
   }
 }
 
@@ -7213,17 +7220,20 @@ a.logo svg:hover {
 .toc {
   display: block;
   clear: both;
-  max-width: 300px;
+  max-width: 500px;
+  border-radius: 0.25rem;
   margin: 1rem auto;
   font-style: italic;
+  background-color: #ccc;
 }
 
 .inline-text-edit {
   font-family: "Open Sans", "Akzidenz", sans-serif;
   font-weight: 700;
   padding: 1px;
-  height: calc(660px - (92.4px + 4 * 1rem + 32px + 660px * .56 + 8px));
-  font-size: 28px;
+  min-height: 100px;
+  font-size: 40px;
+  line-height: 40px;
   color: white;
   display: block;
   width: 100%;
@@ -7234,7 +7244,8 @@ a.logo svg:hover {
 
 @media (max-width: 991px) {
   .inline-text-edit {
-    font-size: 20px;
+    font-size: 30px;
+    line-height: 30px;
   }
 }
 
@@ -7246,12 +7257,17 @@ a.logo svg:hover {
   font-size: inherit;
   text-align: center;
   width: 100%;
+  overflow: hidden;
   color: white;
 }
 
 .artboard__subtitle__word-counter {
   display: none;
   text-align: center;
+}
+
+.artboard__subtitle__word-counter span {
+  font-weight: bold;
 }
 
 .artboard__helper-text {

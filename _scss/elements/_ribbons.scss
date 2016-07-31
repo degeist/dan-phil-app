@@ -2,9 +2,9 @@
 .corner-ribbon{
   display: none;
   @include media-breakpoint-up(md) {
-
+    display: block;
     width: 300px;
-    background: $brand-secondary;
+    background: $brand-info;
     top: 50px;
     left: -75px;
     text-align: center;
