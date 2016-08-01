@@ -1,5 +1,6 @@
 import json
 
+from django.conf import settings
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
 from django.views.decorators.csrf import csrf_exempt
@@ -17,6 +18,7 @@ def view(request, image_id, image_extension, version_id = None):
         artboard = None
 
     context = {
+        'site_url': settings.SITE_URL,
         'artboard': artboard,
         'version_id': version_id,
         'image_id': image_id,
