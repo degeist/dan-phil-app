@@ -67,6 +67,7 @@ $(document).ready(function() {
 
       // Test to see if any BG was uploaded
       if (!cloudinaryVars.backgroundUploaded){
+        debugger
         artboardBackgroundVersion = $('#artboard').css('background-image').replace('url("http://res.cloudinary.com/geist/image/upload/v','').replace('")','');
         console.log(artboardBackgroundVersion);
       } else {
@@ -75,9 +76,9 @@ $(document).ready(function() {
 
       // Construct URL to parse via the view.html
       var artboardURL = '/artboard/v' + artboardBackgroundVersion + '/?cutout=dp-cutout' + cutout + '.png&text=' + text;
-      //console.log(artboardURL);
+      console.log(artboardURL);
       // Send off GET request
-      window.location.href=artboardURL;
+      //window.location.href=artboardURL;
     }
 
     $('.finish').click(finishArtboard);
