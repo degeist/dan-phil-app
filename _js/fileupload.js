@@ -21,10 +21,10 @@ $(document).ready(function(){
       maxFileSize: 8000000, // 8000000 = 8MB
       minFileSize: 1,
       maxNumberOfFiles: 1,
-      acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
+      acceptFileTypes: /(\.|\/)(jpe?g|png)$/i,
       messages : {
           maxNumberOfFiles: 'Only one image at a time, ladies and gents.',
-          acceptFileTypes: 'WYD? The file must be a .jpg, .png or .gif!',
+          acceptFileTypes: 'WYD? The file must be a .jpg or .png!',
           maxFileSize: 'This file is too big! Must be less than 8MB',
           minFileSize: 'This file is small!'
         }
